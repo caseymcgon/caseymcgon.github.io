@@ -1,0 +1,19 @@
+---
+import {Image} from 'astro:assets';
+import type {CollectionEntry} from 'astro:content';
+interface Props{photos:CollectionEntry<'photos'>[];links?:boolean;}
+const {photos,links=false}=Astro.props;
+---
+<div class="photo-grid">{photos.map((p,i)=><figure class:list={['photo-item',{'portrait':p.data.src.height>p.data.src.width}]}><button class="photo-open" data-full={p.data.src.src} data-alt={p.data.alt} data-caption={p.data.caption||p.data.alt} data-trip={links&&p.data.trip?`/trips/${p.data.trip}/`:''} aria-label={`Enlarge: ${p.data.alt}`}><Image src={p.data.src} alt={p.data.alt} widths={[480,800,1200,2400]} sizes="(max-width: 650px) 100vw, 50vw" loading="lazy"/><span class="enlarge" aria-hidden="true">↗</span></button><figcaption><span>{p.data.caption||p.data.alt}</span><span class="photo-number">{String(i+1).padStart(2,'0')}</span></figcaption></figure>)}</div>
+<dialog class="lightbox" aria-label="Expanded photograph"><div class="lightbox-toolbar"><span class="lightbox-counter"></span><button class="lightbox-close" aria-label="Close photo viewer">Close ×</button></div><button class="lightbox-prev" aria-label="Previous photo">←</button><img class="lightbox-image" alt=""/><button class="lightbox-next" aria-label="Next photo">→</button><div class="lightbox-caption"><p></p><a hidden href="/trips/">Read the trip report ↗</a></div></dialog>
+<script>
+ const dialog=document.querySelector<HTMLDialogElement>('.lightbox');
+ const buttons=Array.from(document.querySelectorAll<HTMLButtonElement>('.photo-open'));
+ if(dialog){let index=0;let trigger:HTMLButtonElement|undefined;
+ const show=(n:number)=>{index=(n+buttons.length)%buttons.length;const b=buttons[index];const img=dialog.querySelector<HTMLImageElement>('.lightbox-image')!;img.src=b.dataset.full!;img.alt=b.dataset.alt!;dialog.querySelector('.lightbox-caption p')!.textContent=b.dataset.caption!;dialog.querySelector('.lightbox-counter')!.textContent=`${index+1} / ${buttons.length}`;const a=dialog.querySelector<HTMLAnchorElement>('.lightbox-caption a')!;a.hidden=!b.dataset.trip;a.href=b.dataset.trip||'/trips/';};
+ buttons.forEach((b,n)=>b.addEventListener('click',()=>{trigger=b;show(n);dialog.showModal();document.body.style.overflow='hidden';}));
+ dialog.querySelector('.lightbox-close')!.addEventListener('click',()=>dialog.close());
+ dialog.querySelector('.lightbox-prev')!.addEventListener('click',()=>show(index-1));dialog.querySelector('.lightbox-next')!.addEventListener('click',()=>show(index+1));
+ dialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();show(index+1);}if(e.key==='ArrowLeft'){e.preventDefault();show(index-1);}});
+ dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});dialog.addEventListener('close',()=>{document.body.style.overflow='';trigger?.focus();});}
+</script>
