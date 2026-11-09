@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://caseymcgon.github.io/sitemap-index.xml
