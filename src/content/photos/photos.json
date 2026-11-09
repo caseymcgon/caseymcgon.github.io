@@ -1,0 +1,170 @@
+[
+  {
+    "id": "summer-14",
+    "src": "../../assets/summer-2026/14.jpg",
+    "alt": "A campsite beside a rocky alpine lake",
+    "trip": "summer-in-the-mountains",
+    "selected": true,
+    "order": 0
+  },
+  {
+    "id": "summer-15",
+    "src": "../../assets/summer-2026/15.jpg",
+    "alt": "Warm evening light on a mountain above a lake",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 1
+  },
+  {
+    "id": "summer-16",
+    "src": "../../assets/summer-2026/16.jpg",
+    "alt": "An orange sunset beyond a rocky ridge",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 2
+  },
+  {
+    "id": "summer-17",
+    "src": "../../assets/summer-2026/17.jpg",
+    "alt": "A steep granite peak beneath a blue sky",
+    "trip": "summer-in-the-mountains",
+    "selected": true,
+    "order": 3
+  },
+  {
+    "id": "summer-18",
+    "src": "../../assets/summer-2026/18.jpg",
+    "alt": "A blue alpine lake between rugged peaks",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 4
+  },
+  {
+    "id": "summer-19",
+    "src": "../../assets/summer-2026/19.jpg",
+    "alt": "A hiker above a lake beneath a rocky mountain",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 5
+  },
+  {
+    "id": "summer-20",
+    "src": "../../assets/summer-2026/20.jpg",
+    "alt": "A mountain reflected in a still lake",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 6
+  },
+  {
+    "id": "summer-22",
+    "src": "../../assets/summer-2026/22.jpg",
+    "alt": "A pale rocky basin beneath sharp peaks",
+    "trip": "summer-in-the-mountains",
+    "selected": true,
+    "order": 7
+  },
+  {
+    "id": "summer-23",
+    "src": "../../assets/summer-2026/23.jpg",
+    "alt": "Two blue lakes below a mountain ridge",
+    "trip": "summer-in-the-mountains",
+    "selected": true,
+    "order": 8
+  },
+  {
+    "id": "summer-25",
+    "src": "../../assets/summer-2026/25.jpg",
+    "alt": "A small lake surrounded by pale rock",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 9
+  },
+  {
+    "id": "summer-26",
+    "src": "../../assets/summer-2026/26.jpg",
+    "alt": "A green lake beneath sheer granite walls",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 10
+  },
+  {
+    "id": "summer-27",
+    "src": "../../assets/summer-2026/27.jpg",
+    "alt": "A granite face above a lake and trees",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 11
+  },
+  {
+    "id": "summer-28",
+    "src": "../../assets/summer-2026/28.jpg",
+    "alt": "A hiker beside a lake below a granite peak",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 12
+  },
+  {
+    "id": "summer-29",
+    "src": "../../assets/summer-2026/29.jpg",
+    "alt": "A person sitting on a log at the edge of a lake",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 13
+  },
+  {
+    "id": "summer-30",
+    "src": "../../assets/summer-2026/30.jpg",
+    "alt": "A pale mountain ridge above a lake",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 14
+  },
+  {
+    "id": "summer-31",
+    "src": "../../assets/summer-2026/31.jpg",
+    "alt": "Sunlit mountain walls reflected in water",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 15
+  },
+  {
+    "id": "summer-32",
+    "src": "../../assets/summer-2026/32.jpg",
+    "alt": "A weathered tree in front of a granite face",
+    "trip": "summer-in-the-mountains",
+    "selected": true,
+    "order": 16
+  },
+  {
+    "id": "summer-33",
+    "src": "../../assets/summer-2026/33.jpg",
+    "alt": "Hikers crossing a green alpine meadow",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 17
+  },
+  {
+    "id": "summer-34",
+    "src": "../../assets/summer-2026/34.jpg",
+    "alt": "A stream running through a rocky meadow",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 18
+  },
+  {
+    "id": "summer-35",
+    "src": "../../assets/summer-2026/35.jpg",
+    "alt": "A sweeping view across a mountain basin",
+    "trip": "summer-in-the-mountains",
+    "selected": false,
+    "order": 19
+  },
+  {
+    "id": "summer-36",
+    "src": "../../assets/summer-2026/36.jpg",
+    "alt": "A forested valley surrounded by mountains",
+    "trip": "summer-in-the-mountains",
+    "selected": true,
+    "order": 20
+  }
+]
