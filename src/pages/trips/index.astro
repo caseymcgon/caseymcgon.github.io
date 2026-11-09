@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro';import TripCard from '../../components/TripCard.astro';import {publishedTrips,visiblePhotos} from '../../lib/content';
+const trips=await publishedTrips();const photos=await visiblePhotos();
+---
+<Base title="Trip reports"><section class="page-intro wrap"><p class="eyebrow">THE JOURNAL</p><h1>Somewhere<br/><em>worth remembering.</em></h1><p>Photographs and notes from days away. One trip at a time.</p></section><section class="wrap trip-list">{trips.map(trip=><TripCard trip={trip} photo={photos.find(p=>p.id===trip.data.coverId)!}/>)}<p class="small-note">{trips.length.toString().padStart(2,'0')} report{trips.length===1?'':'s'} and counting.</p></section></Base>
