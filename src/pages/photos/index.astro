@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro';import Gallery from '../../components/Gallery.astro';import {visiblePhotos} from '../../lib/content';
+const photos=(await visiblePhotos()).filter(p=>p.data.selected);
+---
+<Base title="Selected photos"><section class="page-intro wrap"><p class="eyebrow">THROUGH THE LENS</p><h1>The ones<br/><em>I kept.</em></h1><div class="intro-bottom"><p>A small collection of places, light, and moments along the way.</p><span class="small-note">{String(photos.length).padStart(2,'0')} SELECTED PHOTOGRAPHS</span></div><p class="placeholder-note">An initial, temporary selection from the summer photo roll.</p></section><section class="wrap portfolio"><Gallery photos={photos} links/></section></Base>
