@@ -1,0 +1,10 @@
+---
+import '../styles/global.css';
+import {site} from '../config';
+interface Props {title?:string;description?:string;image?:string;}
+const {title,description=site.description,image='/social.jpg'}=Astro.props;
+const pageTitle=title?`${title} · ${site.title}`:site.title;
+const canonical=new URL(Astro.url.pathname,Astro.site);
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><title>{pageTitle}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><meta property="og:title" content={pageTitle}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:url" content={canonical}/><meta property="og:image" content={new URL(image,Astro.site)}/><meta name="twitter:card" content="summary_large_image"/></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header wrap"><a class="wordmark" href="/" aria-label={`${site.title} home`}>casey<span class="dot">.</span><span class="wordmark-note">FIELD NOTES</span></a><nav aria-label="Main navigation">{site.navigation.map(item=><a href={item.href} aria-current={Astro.url.pathname.startsWith(item.href)?'page':undefined}>{item.label}</a>)}<a class="github" href="https://github.com/caseymcgon" aria-label="Casey on GitHub">GitHub ↗</a></nav></header><main id="main"><slot/></main><footer class="site-footer wrap"><a href="/">{site.title}</a><p>A few things worth keeping.</p><span>© {new Date().getFullYear()} {site.name}</span></footer></body></html>
