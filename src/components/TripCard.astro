@@ -1,0 +1,7 @@
+---
+import {Image} from 'astro:assets';
+import type {CollectionEntry} from 'astro:content';
+interface Props{trip:CollectionEntry<'trips'>;photo:CollectionEntry<'photos'>;}
+const {trip,photo}=Astro.props;
+---
+<a class="trip-card" href={`/trips/${trip.id}/`}><div class="trip-card-image"><Image src={photo.data.src} alt={photo.data.alt} widths={[600,1000,1600]} sizes="(max-width: 700px) 100vw, 65vw"/><span class="card-arrow" aria-hidden="true">↗</span></div><div class="trip-card-meta"><span>{trip.data.location}</span><span>{trip.data.period}</span></div><h3>{trip.data.title}</h3><p>{trip.data.description}</p></a>
